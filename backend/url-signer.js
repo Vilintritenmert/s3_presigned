@@ -19,7 +19,7 @@ module.exports.sign = async _ => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ id, data: { url } }),
+    body: JSON.stringify({ id, data: { url, _ } }),
     headers: {
       'Access-Control-Allow-Origin': '*'
     }

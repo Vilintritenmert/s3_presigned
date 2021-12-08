@@ -34,6 +34,31 @@ functions:
           method: get
           cors: true
 
+
+  start-upload:
+    handler: post-multipart.startUpload
+    events:
+      - http:
+          path: /start-multipart-upload
+          method: get
+          cors: true
+
+  get-upload-url:
+    handler: post-multipart.getUploadUrl
+    events:
+      - http:
+          path: /get-multipart-upload-url
+          method: get
+          cors: true
+
+  complete-upload:
+    handler: post-multipart.completeUpload
+    events:
+      - http:
+          path: /complete-multipart-url
+          method: get
+          cors: true
+
 resources:
   Resources:
     SignedUploadBucket:

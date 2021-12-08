@@ -17,7 +17,7 @@ module.exports.sign = async _ => {
     },
     Expires: 300,
     Conditions: [
-      ["content-length-range", 0, 524288]
+      ["content-length-range", 0, 3048576]
     ]
   };
 
@@ -25,7 +25,7 @@ module.exports.sign = async _ => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ id, data }),
+    body: JSON.stringify({ id, data , _ }),
     headers: {
       'Access-Control-Allow-Origin': '*'
     }
